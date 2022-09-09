@@ -1,1 +1,36 @@
 
+
+<input [(ngModel)]='student.rollNumber' placeholder="Enter RollNumber">
+<br>
+<br>
+<input [(ngModel)]='student.firstName' placeholder="Enter FirstName">
+<br>
+<br>
+<input [(ngModel)]='student.lastName' placeholder="Enter LastName">
+<br>
+<br>
+<input [(ngModel)]='student.dob' placeholder="Enter Date of Birth">
+<br>
+<br>
+<input [(ngModel)]='student.standard' placeholder="Enter Class">
+<br/>
+<br/>
+<button (click)="update(student)">Update Student</button>
+<ol class="list-group list-group-numbered">
+    <li *ngFor="let s of students; index as i"class="list-group-item">
+        <span>{{s.rollNumber}}</span>
+        <br>
+        <span>{{s.firstName}}</span>
+        <br>
+        <span>{{s.lastName}}</span>
+        <br>
+        <span>{{s.dob}}</span>
+        <br>
+        <span>{{s.standard}}</span>
+        <button (click)="updatestudent(s, i)">Update Student</button>
+        <br>
+    </li>
+
+</ol>
+
+
